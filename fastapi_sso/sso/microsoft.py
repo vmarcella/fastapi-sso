@@ -42,4 +42,4 @@ class MicrosoftSSO(SSOBase):
 
     @classmethod
     async def openid_from_response(cls, response: dict) -> OpenID:
-        return OpenID(email=response["mail"], display_name=response["displayName"], provider=cls.provider)
+        return OpenID(email=response["email"], display_name=response["displayName"], provider=cls.provider)
